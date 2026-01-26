@@ -1,8 +1,8 @@
 {
-  "name": "cs4530-base",
+  "name": "cs4530-traffic-light-activity",
   "version": "1.0.0",
-  "description": "CS4530 Template",
   "type": "module",
+  "description": "Activity for 'Design Principles for Readable Code'",
   "scripts": {
     "check": "tsc",
     "lint": "eslint .",
@@ -11,7 +11,7 @@
     "prettier:fix": "prettier --write .",
     "test": "vitest run --coverage"
   },
-  "author": "Rob Simmons",
+  "author": "Mitch Wand and Rob Simmons",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@types/express": "^5.0.6",

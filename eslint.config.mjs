@@ -161,6 +161,7 @@ export default defineConfig([
   },
   {
     extends: [eslintPluginPrettierRecommended],
-    rules: { "prettier/prettier": "warn" },
+    // EDIT: remove warning-only for prettier
+    // rules: { "prettier/prettier": "warn" },
   },
 ]);
