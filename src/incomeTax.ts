@@ -25,7 +25,7 @@ export type Bracket = {
 
 // defines the incomes covered by a bracket
 export function isInBracket(income: number, bracket: Bracket): boolean {
-  if (bracket.upper === null) {
+  if (bracket.upper == null) {
     return bracket.lower < income;
   }
   return bracket.lower < income && income <= bracket.upper;
@@ -54,14 +54,14 @@ export type TaxTable = Bracket[];
 // because the brackets are a non-overlapping partition of the positive real numbers,
 // there will be a unique bracket for each income, so the "as Bracket" cast is safe. */
 export function income2bracket(income: number, table: TaxTable): Bracket {
-  return table.find((b0) => isInBracket(income, b0)) as Bracket;
+  return table.find(b0 => isInBracket(income, b0)) as Bracket;
 }
 
 export function grossTax2(income: number, table: TaxTable): number {
   return taxByBracket(income, income2bracket(income, table));
 }
 
-export const TAX_TABLE_1: TaxTable = [
+export const table1: TaxTable = [
   { lower: 0, upper: 10000, base: 0, rate: 0 },
   { lower: 10000, upper: 20000, base: 0, rate: 0.1 },
   { lower: 20000, upper: 50000, base: 1000, rate: 0.2 },
