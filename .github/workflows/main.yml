@@ -25,7 +25,7 @@ jobs:
       - name: Typescript
         run: npm run check
 
-      # Edit: remove for this assignment
+      # Edit: remove for this assignment (linter checks prettier at error level)
       # - name: Formatting
       #  run: npm run prettier
 
