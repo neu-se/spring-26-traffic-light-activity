@@ -54,7 +54,7 @@ export type TaxTable = Bracket[];
 // because the brackets are a non-overlapping partition of the positive real numbers,
 // there will be a unique bracket for each income, so the "as Bracket" cast is safe. */
 export function income2bracket(income: number, table: TaxTable): Bracket {
-  return table.find(b0 => isInBracket(income, b0)) as Bracket;
+  return table.find((b0) => isInBracket(income, b0)) as Bracket;
 }
 
 export function grossTax2(income: number, table: TaxTable): number {

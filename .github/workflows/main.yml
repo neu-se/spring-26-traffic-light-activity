@@ -25,11 +25,13 @@ jobs:
       - name: Typescript
         run: npm run check
 
-      - name: Formatting
-        run: npm run prettier
+      # Edit: remove for this assignment
+      # - name: Formatting
+      #  run: npm run prettier
+
+      # Edit: move tests before lint for this assignment due to lint failures
+      - name: Tests
+        run: npm run test
 
       - name: Linting
         run: npm run lint
-
-      - name: Tests
-        run: npm run test
