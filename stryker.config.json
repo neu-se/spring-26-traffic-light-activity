@@ -1,0 +1,8 @@
+{
+  "testRunner": "vitest",
+  "vitest": {
+    "configFile": "vitest.config.mjs",
+    "dir": "src",
+    "related": true
+  }
+}
