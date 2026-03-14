@@ -25,7 +25,7 @@ export type Bracket = {
 
 // defines the incomes covered by a bracket
 export function isInBracket(income: number, bracket: Bracket): boolean {
-  if (bracket.upper == null) {
+  if (bracket.upper === null) {
     return bracket.lower < income;
   }
   return bracket.lower < income && income <= bracket.upper;
@@ -61,7 +61,7 @@ export function grossTax2(income: number, table: TaxTable): number {
   return taxByBracket(income, income2bracket(income, table));
 }
 
-export const table1: TaxTable = [
+export const TABLE: TaxTable = [
   { lower: 0, upper: 10000, base: 0, rate: 0 },
   { lower: 10000, upper: 20000, base: 0, rate: 0.1 },
   { lower: 20000, upper: 50000, base: 1000, rate: 0.2 },
